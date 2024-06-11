@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 import plugin from "tailwindcss/plugin";
+import daisyui from "daisyui"
 
 const config: Config = {
   content: [
@@ -29,6 +30,7 @@ const config: Config = {
         'h3': { fontSize: theme('fontSize.lg') },
       })
     }),
+    daisyui
   ],
 };
 export default config;

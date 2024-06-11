@@ -10,6 +10,11 @@ function Header() {
     function handleResizeForNav(e: any) {
       if (e.currentTarget.innerWidth >= 768) {
         setNavState(false);
+        if (window.scrollY > 500) {
+          setScrollState(true);
+        } else {
+          setScrollState(false);
+        }
       }
     }
     function handleScrollState() {
@@ -18,8 +23,10 @@ function Header() {
       } else {
         if (navState === true) {
           setScrollState(true);
+
+          console.log(window.scrollY + " navState should true : " + navState);
         } else {
-          setScrollState(false);
+          setScrollState(navState);
         }
       }
     }
@@ -29,23 +36,31 @@ function Header() {
       window.removeEventListener("resize", handleResizeForNav);
       window.removeEventListener("scroll", handleScrollState);
     };
-  }, []);
+  }, [navState]);
   function handleNavToggle() {
-    setNavState(!navState);
-    if (navState === false) {
-      if (window.scrollY < 500) {
-        setScrollState(true);
-        console.log("windowsScroll Y < 500 : " + window.scrollY);
-      }
-    } else {
-      if (window.scrollY > 500) {
-        setScrollState(true);
-        console.log("windowsScroll Y > 500 : " + window.scrollY);
+    console.log(window.scrollY + " b toggle navState : " + navState);
+    
+    setNavState(prevNavState => {
+      const newNavState = !prevNavState;
+      
+      if (newNavState === true) {
+        if (window.scrollY < 500) {
+          setScrollState(true);
+        }
       } else {
-        setScrollState(false);
+        if (window.scrollY > 500) {
+          setScrollState(true);
+        } else {
+          setScrollState(false);
+        }
       }
-    }
+      
+      console.log(window.scrollY + " toggle navState : " + newNavState);
+      
+      return newNavState;
+    });
   }
+  
   return (
     // <h1>ff</h1>
 
