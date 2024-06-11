@@ -7,5 +7,5 @@
 
 
 .on-scroll{
-  @apply backdrop-blur-sm bg-white/30 dark:bg-gray-900/10 
+  @apply backdrop-blur-xl bg-gray-900/20 dark:bg-gray-900/20 
 }

@@ -1,26 +1,26 @@
+import { CompanyOverview } from "@/components/CompanyOverview";
 import { Hero } from "../components/Hero";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <Hero />
-      <Hero />
-      <div className="bg-green-600 w-screen relative self-center flex justify-center">
+      <CompanyOverview/>
+      {/* <div className="bg-green-600 w-screen relative self-center flex justify-center">
         <div className="max-w-6xl w-full bg-red-200 self-center text-center">
           <h1>dasd</h1>
         </div>
-      </div>
-      <h1>me content</h1>
-      <div className="bg-gray-300 w-full h-full p-4">
+      </div> */}
+      {/* <h1>me content</h1> */}
+      {/* <div className="bg-gray-300 w-full h-full p-4">
         <h1>me content</h1>
-      </div>
+      </div> */}
       {/* <Hero /> */}
-      <div className="bg-green-600 w-screen relative self-center flex justify-center">
+      {/* <div className="bg-green-600 w-screen relative self-center flex justify-center">
         <div className="max-w-6xl w-full bg-red-200 self-center ">
           <h1>dasd</h1>
         </div>
-      </div>
+      </div> */}
       {/* <Hero /> */}
     </>
   );

@@ -23,8 +23,6 @@ function Header() {
       } else {
         if (navState === true) {
           setScrollState(true);
-
-          console.log(window.scrollY + " navState should true : " + navState);
         } else {
           setScrollState(navState);
         }
@@ -38,8 +36,6 @@ function Header() {
     };
   }, [navState]);
   function handleNavToggle() {
-    console.log(window.scrollY + " b toggle navState : " + navState);
-    
     setNavState(prevNavState => {
       const newNavState = !prevNavState;
       
@@ -54,8 +50,6 @@ function Header() {
           setScrollState(false);
         }
       }
-      
-      console.log(window.scrollY + " toggle navState : " + newNavState);
       
       return newNavState;
     });
