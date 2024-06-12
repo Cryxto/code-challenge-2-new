@@ -1,9 +1,10 @@
+import { didactGothic } from "@/app/layout";
 import Image from "next/image";
 
 function CompanyOverview() {
   return (
     <>
-      <div className="hero min-h-screen text-gray-900  py-14">
+      <div className={`hero min-h-screen text-gray-900 py-14  leading-loose `}>
       {/* <div className="hero min-h-screen bg-red-200 text-gray-900 py-14"> */}
         <div className="hero-content flex-col lg:flex-row">
           <div className="p-3">
@@ -18,7 +19,7 @@ function CompanyOverview() {
           </div>
           <div className="text-justify max-w-xl p-3">
             <p className="py-6">
-              At Nyoo Kayu Woodworking, craftsmanship meets sustainability in the creation of premium, eco-friendly
+              <b>Nyoo Kayu Woodworking</b> company made craftsmanship meets sustainability in the creation of premium, eco-friendly
               furniture. 'Nyoo' signifies creativity, 'Kayu' represents our primary material—wood, and 'Woodworking'
               underscores our expertise. Each piece is meticulously crafted to ensure durability and quality, enhancing
               both aesthetics and functionality. We use water-based, non-toxic finishes safe for humans and the

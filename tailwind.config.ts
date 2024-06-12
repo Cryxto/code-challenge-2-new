@@ -14,12 +14,22 @@ const config: Config = {
       serif: ["Poppins", "sans-serif"],
     },
     extend: {
-      
-      // backgroundImage: {
-      //   "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-      //   "gradient-conic":
-      //     "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      // },
+      screens: {
+        'max-sm': { 'raw': '(max-width: 768px)' },
+        // => @media (max-width: 768px) { ... }
+
+        'max-md': { 'raw': '(max-width: 1024px)' },
+        // => @media (max-width: 1024px) { ... }
+
+        'max-lg': { 'raw': '(max-width: 1280px)' },
+        // => @media (max-width: 1280px) { ... }
+
+        'max-xl': { 'raw': '(max-width: 1536px)' },
+        // => @media (max-width: 1536px) { ... }
+
+        'max-2xl': { 'raw': '(max-width: 3072px)' },
+        // => @media (max-width: 3072px) { ... }
+      },
     },
   },
   plugins: [
