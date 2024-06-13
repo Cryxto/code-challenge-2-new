@@ -1,14 +1,42 @@
-import { CompanyOverview } from "@/components/CompanyOverview";
+import { CompanyOverview, CompanyOverviewInterface } from "@/components/CompanyOverview";
 import { Hero } from "../components/Hero";
 import { Products } from "@/components/Products";
+import { Modal } from "@/components/Modal";
 
 export default function Home() {
-  
+  const companyOverviewData: CompanyOverviewInterface[] = [
+    {
+      theImage:
+        "https://images.unsplash.com/photo-1597072689227-8882273e8f6a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+  ];
+  let reverse = false;
+
   return (
     <>
       <Hero />
-      <CompanyOverview/>
-      <Products/>
+      {companyOverviewData.map((data,i) => {
+        data.reverse = reverse;
+        reverse = !reverse;
+        return (
+          <CompanyOverview key={i} props={data}>
+            <p className="py-6">
+              <b>Nyoo Kayu Woodworking</b> was established in 2010 by <b>Markus Udayana</b> and operates in Kabupaten
+              Tangerang, Banten Province, Indonesia. What began as a woodworking hobby has evolved into a passion-driven
+              enterprise. The company blends craftsmanship with sustainability to create premium, eco-friendly
+              furniture. 'Nyoo' signifies 'bermain' or 'mainan' (as a verb), reflecting our frequent engagement with
+              wood craftsmanship, 'Kayu' represents our primary material—wood, and 'Woodworking' underscores our
+              expertise. Each piece is meticulously crafted to ensure durability and quality, enhancing both aesthetics
+              and functionality. We use water-based, non-toxic finishes that are safe for humans and the environment,
+              and our commitment to sustainability is demonstrated through the use of recycled pine wood. Explore our
+              range, including child-friendly educational blocks, and experience the dedication embedded in every piece.
+            </p>
+          </CompanyOverview>
+        );
+      })}
+      <Products />
+      <Modal/>
+
       {/* <div className="bg-green-600 w-screen relative self-center flex justify-center">
         <div className="max-w-6xl w-full bg-red-200 self-center text-center">
           <h1>dasd</h1>

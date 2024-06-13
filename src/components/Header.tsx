@@ -74,7 +74,7 @@ function Header() {
       id="header"
       className={`${
         scrollState ? "on-scroll" : ""
-      } text-slate-100  fixed z-50 w-full  top-0 left-0 dark:text-slate-100 rounded-b-[2rem]`}>
+      } text-slate-100 max-h-full fixed z-30 w-full max-w-full top-0 left-0 dark:text-slate-100 rounded-b-[2rem]`}>
       {/* <header className="text-black backdrop-blur-sm bg-white/30 absolute z-50 w-full top-0 left-0 dark:text-white dark:bg-gray-900/90 h-16"> */}
       <Navbar navState={navState} handleNavToggle={handleNavToggle} />
     </header>
