@@ -4,13 +4,13 @@ export interface ModalContextInterface {
   modalActive: boolean;
   handleModalToggle: () => void;
   setModalActive : Dispatch<SetStateAction<boolean>>;
-  scrollBarWidth : string,
-  setScrollBarWidth : Dispatch<SetStateAction<string>>
+  modalWidth : string,
+  setModalWidth : Dispatch<SetStateAction<string>>
 }
 export const ModalContext = createContext<ModalContextInterface>({
   modalActive: false,
   handleModalToggle: () => {},
   setModalActive: () => {},
-  scrollBarWidth:'',
-  setScrollBarWidth:()=>{}
+  modalWidth:'',
+  setModalWidth:()=>{}
 });

@@ -4,19 +4,18 @@ import { ModalContext } from "@/context/modal-context";
 import { useCallback, useContext, useEffect, useRef } from "react";
 
 function Modal() {
-  const { modalActive, setModalActive, scrollBarWidth, setScrollBarWidth } =
+  const { modalActive, setModalActive, modalWidth, setModalWidth } =
     useContext(ModalContext);
   function getFullWidthRespectingScrollbarInVw() {
-    const theScrollbarWidth = window?.innerWidth - document.documentElement.clientWidth;
-    return "calc(100% - " + (theScrollbarWidth <= 1 ? 0 : theScrollbarWidth) + "px)";
+    const themodalWidth = window?.innerWidth - document.documentElement.clientWidth;
+    return "calc(100% - " + (themodalWidth <= 1 ? 0 : themodalWidth) + "px)";
   }
 
   const ref = useRef<HTMLDialogElement>(null);
 
   useEffect(() => {
-    setScrollBarWidth(getFullWidthRespectingScrollbarInVw());
-    console.log(scrollBarWidth);
-  }, [scrollBarWidth]);
+    setModalWidth(getFullWidthRespectingScrollbarInVw());
+  }, [modalWidth]);
 
   const handleShow = useCallback(() => {
     ref.current?.showModal();
@@ -35,7 +34,7 @@ function Modal() {
       <button className="btn" onClick={handleShow}>
         open modal
       </button>
-      <dialog id="my_modal_1" ref={ref} style={{ maxWidth: modalActive?scrollBarWidth : '100%' }} className={`modal w-full`}>
+      <dialog id="my_modal_1" ref={ref} style={{ maxWidth: modalActive?modalWidth : '100%' }} className={`modal w-full`}>
         <div className="modal-box">
           <h3 className="font-bold text-lg">Hello!</h3>
           <p className="py-4">Press ESC key or click the button below to close</p>
