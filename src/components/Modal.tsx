@@ -7,9 +7,10 @@ function Modal() {
   const { modalActive, setModalActive, modalVw, setModalVw } = useContext(ModalContext);
   function getFullWidthRespectingScrollbarInVw() {
     const scrollbarWidth = window?.innerWidth - document.documentElement.clientWidth;
-    const fullWidthRespectingScrollbar = window?.innerWidth - scrollbarWidth;
-    const fullWidthInVw = (fullWidthRespectingScrollbar / window?.innerWidth) * 100;
-    return fullWidthInVw+'%';
+    // const fullWidthRespectingScrollbar = window?.innerWidth - scrollbarWidth;
+    // const fullWidthInVw = (fullWidthRespectingScrollbar / window?.innerWidth) * 100;
+    return 'calc(100% - '+(scrollbarWidth<=1?0:scrollbarWidth)+'px)';
+    // return scrollbarWidth+'px';
   }
   
 
@@ -18,16 +19,18 @@ function Modal() {
   const ref = useRef<HTMLDialogElement>(null);
 
   useEffect(()=>{
-    function handleResizeForModal() {
-      setModalVw(getFullWidthRespectingScrollbarInVw())
-    }
+    // function handleResizeForModal() {
+    //   setModalVw(getFullWidthRespectingScrollbarInVw())
+    // }
     
     setModalVw(getFullWidthRespectingScrollbarInVw())
-    window.addEventListener('resize',handleResizeForModal)
-    return ()=>{
-      window.removeEventListener('resize',handleResizeForModal)
-      console.log(modalVw);
-    }
+    // window.addEventListener('resize',handleResizeForModal)
+    console.log(modalVw);
+    
+    // return ()=>{
+    //   window.removeEventListener('resize',handleResizeForModal)
+    //   console.log(modalVw);
+    // }
   },[modalVw])
 
   const handleShow = useCallback(() => {
@@ -58,7 +61,7 @@ function Modal() {
       <dialog
         id="my_modal_1"
         ref={ref}
-        // style={{maxWidth:modalActive ? modalVw:'100vw'}}
+        style={{maxWidth:modalVw}}
         className={`modal w-full`}>
         <div className="modal-box">
           <h3 className="font-bold text-lg">Hello!</h3>
