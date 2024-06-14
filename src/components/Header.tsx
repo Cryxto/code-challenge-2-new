@@ -1,10 +1,12 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Navbar } from "./Navbar";
+import { ModalContext } from "@/context/modal-context";
 
 function Header() {
   const [navState, setNavState] = useState<boolean>(false);
   const [scrollState, setScrollState] = useState<boolean>(false);
+  const {modalWidth, modalActive} = useContext(ModalContext)
 
   useEffect(() => {
     if (document.readyState==='complete') {
@@ -72,6 +74,7 @@ function Header() {
     // <header className="text-black backdrop-blur-sm bg-white/30 fixed z-50 w-full top-0 left-0 dark:text-slate-100 dark:bg-gray-900/10">
     <header
       id="header"
+      style={{maxWidth:modalActive?modalWidth:'100%'}}
       className={`${
         scrollState ? "on-scroll" : ""
       } text-slate-100 max-h-full fixed z-30 w-full max-w-full top-0 left-0 dark:text-slate-100 rounded-b-[2rem]`}>
