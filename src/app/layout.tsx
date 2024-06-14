@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className={poppins.className+' text-slate-100 bg-[#f8f8f8]'}>
         {/* <div className="w-full bg-teal-300 flex items-center justify-center flex-col"> */}
-        <div className="w-full flex items-center justify-center flex-col">
+        <div className="w-full flex items-center justify-center flex-col max-w-full overflow-x-hidden">
           <Header />
           <main className=" flex flex-1 flex-col w-full">
             {children}
