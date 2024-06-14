@@ -5,11 +5,23 @@
 @tailwind components;
 @tailwind utilities;
 
+/* @layer components {
+  .max-w-full-respect-scrollbar{
+    @apply max-w-[calc(100vw-calc(100vw-100%))]
+  }
+} */
+/* *{
+  @apply max-w-full
+} */
 
 .on-scroll{
   @apply backdrop-blur-xl bg-gray-900/20 dark:bg-gray-900/20 
 }
 
-dialog{
-  @apply max-w-xl
+/* dialog{
+  @apply max-w-full
 }
+
+::backdrop{
+  @apply max-w-full
+} */
