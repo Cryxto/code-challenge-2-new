@@ -1,13 +1,23 @@
 "use client";
+
+import { useCallback, useRef } from "react";
+
 function Modal() {
+  const ref = useRef<HTMLDialogElement>(null);
+  const handleShow = useCallback(() => {
+    ref.current?.showModal();
+  }, [ref]);
+  const handleClose = useCallback(() => {
+    ref.current?.close();
+  }, [ref]);
   return (
-    <div className="w-full flex justify-center">
+    <div className="w-full max-w-full flex justify-center">
       {/* Open the modal using document.getElementById('ID').showModal() method */}
       {/* <button className="btn" onClick={() => document.getElementById("my_modal_1").showModal()}> */}
-      <button className="btn" onClick={() => document.getElementById("my_modal_1").showModal()}>
+      <button className="btn" onClick={handleShow}>
         open modal
       </button>
-      <dialog id="my_modal_1" className="modal w-full max-w-full">
+      <dialog id="my_modal_1" ref={ref} className="modal overflow-y-auto w-full max-w-[94%]">
         <div className="modal-box">
           <h3 className="font-bold text-lg">Hello!</h3>
           <p className="py-4">Press ESC key or click the button below to close</p>
