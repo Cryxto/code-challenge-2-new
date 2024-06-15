@@ -35,6 +35,20 @@ export default function Home() {
       )
       ,
     },
+    {
+      theImage:
+        "https://images.unsplash.com/photo-1585800935411-d7d7eed23ccc?q=80&w=1475&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      children: ( 
+        <>
+          <p className="py-6">
+            We use water-based, non-toxic finishes that are safe for humans and the environment, and our
+            commitment to sustainability is demonstrated through the use of recycled pine wood. Explore our range,
+            including child-friendly educational blocks, and experience the dedication embedded in every piece.
+          </p>
+        </>
+      )
+      ,
+    },
   ];
   let reverse = false;
 
@@ -47,7 +61,7 @@ export default function Home() {
         return <CompanyOverview key={i} {...data} />;
       })}
       <Products />
-      <Modal />
+      {/* <Modal /> */}
 
       {/* <div className="bg-green-600 w-screen relative self-center flex justify-center">
         <div className="max-w-6xl w-full bg-red-200 self-center text-center">
