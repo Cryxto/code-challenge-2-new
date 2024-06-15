@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Modal } from "./Modal";
 
 function Products() {
   return (
@@ -11,7 +12,8 @@ function Products() {
           {/* <div className="grid grid-cols-2 gap-2"> */}
           <div className="flex flex-col lg:w-full lg:flex-row px-4 justify-center items-center ">
             {/* <div className="grid flex-grow h-64 card bg-base-300 rounded-box place-items-center">content</div> */}
-            <Link href={"#"} className="hover:text-gray-900 text-slate-100 ">
+            {/* <Link href={"#"} className="hover:text-gray-900 text-slate-100 "> */}
+            <Modal>
               <div className="card w-96 bg-base-100/95 shadow-xl h-64 relative overflow-hidden">
                 <figure className="w-full h-full">
                   <Image
@@ -27,9 +29,11 @@ function Products() {
                   {/* <p className="flex-grow-0">Click for more</p> */}
                 </div>
               </div>
-            </Link>
+            </Modal>
+            {/* </Link> */}
             <div className="divider lg:divider-horizontal divider-neutral text-gray-900 ">AND</div>
-            <Link href={"#"} className="hover:text-gray-900 text-slate-100 ">
+            {/* <Link href={"#"} className="hover:text-gray-900 text-slate-100 "> */}
+            <Modal>
               <div className="card w-96 bg-base-100/95 shadow-xl h-64 relative overflow-hidden">
                 <figure className="w-full h-full">
                   <Image
@@ -45,7 +49,8 @@ function Products() {
                   {/* <p className="flex-grow-0 ">jdasdasa</p> */}
                 </div>
               </div>
-            </Link>
+            </Modal>
+            {/* </Link> */}
           </div>
           {/* </div> */}
         </div>
