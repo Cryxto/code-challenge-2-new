@@ -36,14 +36,95 @@ export function RandomUserProvider({ children }: { children: ReactNode }) {
             "We ordered a custom dining set, and Nyoo Kayu Woodworking crafted it beautifully. The set is elegant and exactly what we envisioned. Outstanding custom woodworking!",
             "Nyoo Kayu Woodworking repaired our old wooden wardrobe, which had a broken door and loose hinges. They restored it to its former glory. Exceptional repair service!",
             "I bought a finished wooden bench from Nyoo Kayu Woodworking for our garden. It's not only aesthetically pleasing but also very durable. A great addition to our outdoor space.",
+            "The custom wooden picture frames we ordered are perfect. Nyoo Kayu Woodworking did a fantastic job matching them to our decor. Highly satisfied!",
+            "We needed a unique gift for a friend's housewarming, and Nyoo Kayu Woodworking's custom wall art was the perfect choice. Beautiful craftsmanship!",
+            "Nyoo Kayu Woodworking's team built a fantastic custom closet organizer for us. It's incredibly functional and looks great. Highly recommend their custom services!",
+            "I had a broken antique cabinet that I thought was beyond repair, but Nyoo Kayu Woodworking restored it to its original beauty. Their repair skills are unmatched.",
+            "Our new kitchen island from Nyoo Kayu Woodworking is both beautiful and functional. The craftsmanship is superb, and it was delivered on time. Excellent product!",
+            "The outdoor wooden swing we bought from Nyoo Kayu Woodworking is now the favorite spot in our garden. It's sturdy, comfortable, and looks fantastic. Great addition!",
+            "Nyoo Kayu Woodworking made a custom mantelpiece for our fireplace. It has transformed the room with its elegance and quality. Couldn't be happier with the result!",
+            "We commissioned Nyoo Kayu Woodworking to create a wooden playhouse for our kids. It's beautifully made, safe, and has brought endless joy to our children. Outstanding work!",
+            "I ordered a custom wooden desk for my home office, and Nyoo Kayu Woodworking delivered exactly what I envisioned. The quality and attention to detail are excellent.",
+            "Nyoo Kayu Woodworking's custom cutting boards are the best. I ordered several as gifts, and everyone loves them. Beautifully made and very functional!",
+            "Our new wooden garden trellis from Nyoo Kayu Woodworking is perfect. It’s sturdy and adds a beautiful touch to our garden. Very happy with the purchase.",
+            "The handcrafted jewelry box we bought is a piece of art. The detail and finish are remarkable. Nyoo Kayu Woodworking exceeded our expectations!",
+            "Nyoo Kayu Woodworking built a custom media console for us. It's stylish, well-crafted, and fits perfectly in our living room. Fantastic job!",
+            "We had Nyoo Kayu Woodworking repair an old wooden gate, and it looks like new again. Their repair service is top-notch!",
+            "Our custom wooden headboard from Nyoo Kayu Woodworking has transformed our bedroom. It's beautifully crafted and exactly what we wanted. Highly recommended!"
           ];
+          
+          const companyTeam = [
+            {
+              position: "Head Carpenter",
+              expertise: "Custom Woodworking and Furniture Design"
+            },
+            {
+              position: "Finishing Specialist",
+              expertise: "Wood Finishing and Surface Treatments"
+            },
+            {
+              position: "Repair Technician",
+              expertise: "Furniture Repair and Restoration"
+            },
+            {
+              position: "Project Manager",
+              expertise: "Project Coordination and Client Relations"
+            },
+            {
+              position: "Woodcraft Designer",
+              expertise: "Creative Woodcraft Design and Prototyping"
+            },
+            {
+              position: "Quality Control Inspector",
+              expertise: "Quality Assurance and Material Inspection"
+            },
+            {
+              position: "CNC Machine Operator",
+              expertise: "Automated Wood Cutting and Shaping"
+            },
+            {
+              position: "Sales Manager",
+              expertise: "Client Acquisition and Sales Strategy"
+            },
+            {
+              position: "Logistics Coordinator",
+              expertise: "Inventory Management and Distribution"
+            },
+            {
+              position: "Marketing Specialist",
+              expertise: "Brand Promotion and Digital Marketing"
+            },
+            {
+              position: "IT Specialist",
+              expertise: "Network Management and Technical Support"
+            },
+            {
+              position: "Customer Service Representative",
+              expertise: "Client Assistance and Service Coordination"
+            },
+            {
+              position: "Warehouse Manager",
+              expertise: "Storage and Inventory Organization"
+            },
+            {
+              position: "Accounts Manager",
+              expertise: "Financial Management and Bookkeeping"
+            },
+            {
+              position: "Procurement Officer",
+              expertise: "Material Sourcing and Supplier Relations"
+            }
+          ];
+          
           setTestimonies(
-            [...e.results.slice(20)].map((e: any, i: number) => {
+            [...e.results.slice(16)].map((e: any, i: number) => {
               e.testimonies = testimonials[i];
               return e;
             })
           );
-          setTeams([...e.results.slice(10, 15)]);
+          setTeams([...e.results.slice(0, 15)].map((e: any, i: number)=>{
+            return {...e,...companyTeam[i]}
+          }));
           localStorage.setItem('testimonies', JSON.stringify([...e.results.slice(20)]))
           localStorage.setItem('teams',JSON.stringify([...e.results.slice(10, 15)]))
         });
@@ -53,6 +134,7 @@ export function RandomUserProvider({ children }: { children: ReactNode }) {
       }
     }
   }, []);
+  console.log(teams);
   
   return (
     <RandomUserContext.Provider
