@@ -35,9 +35,11 @@ function Modal() {
         open modal
       </button>
       <dialog id="my_modal_1" ref={ref} style={{ maxWidth: modalActive?modalWidth : '100%' }} className={`modal w-full`}>
-        <div className="modal-box">
+        <div className="modal-box bg-[#f8f8f8]">
           <h3 className="font-bold text-lg">Hello!</h3>
-          <p className="py-4">Press ESC key or click the button below to close</p>
+          <p className="py-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque dolorem laudantium aperiam ipsam veniam in beatae, temporibus sapiente corporis, consequuntur, perferendis repudiandae debitis quisquam numquam quidem praesentium obcaecati esse molestiae.
+          Nesciunt in vitae deleniti amet qui aut nisi sed labore sit cumque, nemo magni quos tempore. Esse, minus, iure sunt quisquam magni culpa aperiam suscipit beatae reprehenderit similique ipsa aliquam.
+          Maxime, quibusdam cum beatae velit praesentium nihil quas ab maiores, in ut minima accusantium, numquam aspernatur enim cumque nulla accusamus corrupti dolorem. Excepturi vel, tempore aliquam repellendus molestias voluptates sunt.</p>
           <div className="modal-action">
             <form method="dialog">
               {/* if there is a button in form, it will close the modal */}

@@ -5,7 +5,8 @@ function Products() {
   return (
     <>
       <div className="w-full p-10 py-24 flex flex-col drop-shadow-lg  shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_-10px_15px_-3px_rgba(0,0,0,0.1)] my-20">
-        <h1 className="text-gray-900 font-bold self-center pb-12 text-4xl">Our Product</h1>
+        <h1 className="text-gray-900 font-bold self-center pb-16 text-4xl">Our Product</h1>
+        {/* <p className="text-gray-900 self-center pb-16"></p> */}
         <div className="w-full max-w-4xl flex flex-wrap justify-center pb-14 self-center gap-2 ">
           {/* <div className="grid grid-cols-2 gap-2"> */}
           <div className="flex flex-col lg:w-full lg:flex-row px-4 justify-center items-center ">

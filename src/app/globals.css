@@ -7,7 +7,7 @@
 
 
 .on-scroll{
-  @apply backdrop-blur-xl bg-gray-900/20 dark:bg-gray-900/20 
+  @apply backdrop-blur-xl bg-gray-900/50 dark:bg-[#271008]/40
 }
 
 /* dialog{

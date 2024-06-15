@@ -22,8 +22,7 @@ function Hero() {
           <p className="font-medium">Quality Oriented</p>
           <h1 className="font-bold text-5xl md:text-7xl drop-shadow-2xl rounded-br-[20rem]">Woodworking Solution</h1>
           <p className="max-w-[600px] drop-shadow-2xl py-2 text-xl">
-            with the best quality , eco friendly and harmless to the environment material, so do the best quality of
-            service and delivery
+            with the best quality material and service, eco friendly and harmless to the environment
           </p>
           {/* <button className='bg-white text-black '>Reserve Now</button> */}
         </div>
