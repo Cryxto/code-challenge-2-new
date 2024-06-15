@@ -125,8 +125,8 @@ export function RandomUserProvider({ children }: { children: ReactNode }) {
           setTeams([...e.results.slice(0, 15)].map((e: any, i: number)=>{
             return {...e,...companyTeam[i]}
           }));
-          localStorage.setItem('testimonies', JSON.stringify([...e.results.slice(20)]))
-          localStorage.setItem('teams',JSON.stringify([...e.results.slice(10, 15)]))
+          localStorage.setItem('testimonies', JSON.stringify([...e.results.slice(16)]))
+          localStorage.setItem('teams',JSON.stringify([...e.results.slice(0, 15)]))
         });
       } else {
         setTestimonies(testimonies)
@@ -134,7 +134,7 @@ export function RandomUserProvider({ children }: { children: ReactNode }) {
       }
     }
   }, []);
-  console.log(teams);
+  // console.log(teams);
   
   return (
     <RandomUserContext.Provider
