@@ -3,6 +3,7 @@ import { Hero } from "../components/Hero";
 import { Products } from "@/components/Products";
 import { ModalProduct } from "@/components/ModalProduct";
 import React from "react";
+import { Testimony } from "@/components/Testimony";
 
 export default function Home() {
   const companyOverviewData: CompanyOverviewInterface[] = [
@@ -61,6 +62,7 @@ export default function Home() {
         return <CompanyOverview key={i} {...data} />;
       })}
       <Products />
+      <Testimony/>
       {/* <Modal /> */}
 
       {/* <div className="bg-green-600 w-screen relative self-center flex justify-center">
