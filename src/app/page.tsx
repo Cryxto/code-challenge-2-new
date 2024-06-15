@@ -1,7 +1,7 @@
 import { CompanyOverview, CompanyOverviewInterface } from "@/components/CompanyOverview";
 import { Hero } from "../components/Hero";
 import { Products } from "@/components/Products";
-import { Modal } from "@/components/Modal";
+import { ModalProduct } from "@/components/ModalProduct";
 import React from "react";
 
 export default function Home() {

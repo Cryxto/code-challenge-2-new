@@ -5,7 +5,13 @@ import Image from "next/image";
 import { ReactNode, useCallback, useContext, useEffect, useRef } from "react";
 import { RxCross2 } from "react-icons/rx";
 
-function Modal({ children }: { children: ReactNode }) {
+export interface ModalProductInterface {
+  title?:string,
+  description?:string,
+  content?:ReactNode,
+}
+
+function ModalProduct({ props, children }: { props:ModalProductInterface, children: ReactNode }) {
   const { modalActive, setModalActive, modalWidth, setModalWidth } = useContext(ModalContext);
 
   function getFullWidthRespectingScrollbarInVw() {
@@ -72,27 +78,27 @@ function Modal({ children }: { children: ReactNode }) {
         className="modal w-full overflow-y-auto"
         onClose={handleDialogOnClose}>
         <div className="modal-box bg-[#f8f8f8] text-gray-900 max-h-[90%] m-auto relative max-w-full ">
+
+          {/* Button */}
           <button
             className="absolute right-4 top-4 text-2xl hover:text-gray-300 focus:outline-none"
             onClick={handleClose}>
             <RxCross2 />
           </button>
-          <h2 className="font-bold text-2xl">Product Based</h2>
-          <p className="py-4 text-justify leading-loose">
-            We make and release a finished woodcraft product that ready to use.
+          {/* End Button */}
+
+          {/* Content */}
+          <h2 className="font-bold text-2xl px-4">{props.title}</h2>
+          <p className="py-4 px-4 text-justify leading-loose">
+            {props.description}
           </p>
-          <div className="card md:card-side bg-[#f8f8f8] drop-shadow-lg  shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_-10px_15px_-3px_rgba(0,0,0,0.1)] m-6">
-            <figure>
-              <Image width={1000} height={1000} src="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.jpg"  alt="Album" />
-            </figure>
-            <div className="card-body">
-              <h2 className="card-title">New album is released!</h2>
-              <p>Click the button to listen on Spotiwhy app.</p>
-              <div className="card-actions justify-end">
-                <button className="btn btn-primary">Listen</button>
-              </div>
-            </div>
-          </div>
+
+          {/* Product Details */}
+          {props.content}
+          {/* End Product Details */}
+
+          {/* End Content */}
+
           <div className="modal-action">
             <button onClick={handleClose} className="btn">
               Close
@@ -107,4 +113,4 @@ function Modal({ children }: { children: ReactNode }) {
   );
 }
 
-export { Modal };
+export { ModalProduct };

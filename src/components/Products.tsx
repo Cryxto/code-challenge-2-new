@@ -1,19 +1,20 @@
 import Image from "next/image";
-import Link from "next/link";
-import { Modal } from "./Modal";
+import { ModalProduct } from "./ModalProduct";
+import ProductsData from "./ProductsData";
 
 function Products() {
   return (
     <>
       <div className="w-full p-10 py-24 flex flex-col drop-shadow-lg  shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1),0px_-10px_15px_-3px_rgba(0,0,0,0.1)] my-20">
         <h1 className="text-gray-900 font-bold self-center pb-16 text-4xl">Our Product</h1>
-        {/* <p className="text-gray-900 self-center pb-16"></p> */}
         <div className="w-full max-w-4xl flex flex-wrap justify-center pb-14 self-center gap-2 ">
-          {/* <div className="grid grid-cols-2 gap-2"> */}
           <div className="flex flex-col lg:w-full lg:flex-row px-4 justify-center items-center ">
-            {/* <div className="grid flex-grow h-64 card bg-base-300 rounded-box place-items-center">content</div> */}
-            {/* <Link href={"#"} className="hover:text-gray-900 text-slate-100 "> */}
-            <Modal>
+            <ModalProduct
+              props={{
+                title: "Product Based",
+                description: " We make and release a finished woodcraft product that ready to use.",
+                content: <ProductsData productType="product" />,
+              }}>
               <div className="card w-96 bg-base-100/95 shadow-xl h-64 relative overflow-hidden">
                 <figure className="w-full h-full">
                   <Image
@@ -26,14 +27,17 @@ function Products() {
                 </figure>
                 <div className="card-body absolute inset-0 flex-wrap justify-center items-center text-center p-10 bg-black bg-opacity-50 rounded-box hover:bg-opacity-10">
                   <h2 className="card-title ">Product Based</h2>
-                  {/* <p className="flex-grow-0">Click for more</p> */}
                 </div>
               </div>
-            </Modal>
+            </ModalProduct>
             {/* </Link> */}
             <div className="divider lg:divider-horizontal divider-neutral text-gray-900 ">AND</div>
-            {/* <Link href={"#"} className="hover:text-gray-900 text-slate-100 "> */}
-            <Modal>
+            <ModalProduct
+              props={{
+                title: "Service Based",
+                description: " We nande to use.",
+                content: <ProductsData productType="service" />,
+              }}>
               <div className="card w-96 bg-base-100/95 shadow-xl h-64 relative overflow-hidden">
                 <figure className="w-full h-full">
                   <Image
@@ -46,13 +50,10 @@ function Products() {
                 </figure>
                 <div className="card-body absolute inset-0 flex-wrap justify-center items-center text-center p-10 bg-black bg-opacity-50 rounded-box hover:bg-opacity-10">
                   <h2 className="card-title ">Service Based</h2>
-                  {/* <p className="flex-grow-0 ">jdasdasa</p> */}
                 </div>
               </div>
-            </Modal>
-            {/* </Link> */}
+            </ModalProduct>
           </div>
-          {/* </div> */}
         </div>
       </div>
     </>

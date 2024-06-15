@@ -41,10 +41,10 @@ function Navbar({ navState, handleNavToggle}: navStateInterface) {
                 <a href="#">About Us</a>
               </li>
               <li className="py-2">
-                <a href="#">Service</a>
+                <a href="#">Product</a>
               </li>
               <li className="py-2">
-                <a href="#">Contact</a>
+                <a href="#">Teams</a>
               </li>
             </ul>
           </div>
