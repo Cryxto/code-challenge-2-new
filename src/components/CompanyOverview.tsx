@@ -5,6 +5,7 @@ import React from "react";
 export interface CompanyOverviewInterface {
   theImage?: string;
   reverse?: boolean;
+  shadow?:boolean
   children: React.ReactNode;
 }
 
@@ -23,12 +24,12 @@ const defaultValue = {
 function CompanyOverview(props: CompanyOverviewInterface) {
   return (
     <>
-      <section id="company-overview" className={`hero lg:min-h-screen text-gray-900 lg:py-14  leading-loose `}>
+      <div className={`hero lg:min-h-full text-gray-900 py-20   leading-loose `}>
         <div className={`hero-content flex-col md:flex-row${props.reverse?'-reverse':''}`}>
           <figure className="p-3 max-w-96">
             <Image
               src={props.theImage || defaultValue.theImage}
-              className="max-w-full w-full rounded-lg shadow-2xl"
+              className={`max-w-full w-full rounded-lg ${props.shadow?'shadow-2xl':''}`}
               // fill={true}
               width={1000}
               height={1000}
@@ -37,7 +38,7 @@ function CompanyOverview(props: CompanyOverviewInterface) {
           </figure>
           <div className="text-justify max-w-sm lg:max-w-xl md:max-w-md p-3">{props.children || defaultValue.children}</div>
         </div>
-      </section>
+      </div>
     </>
   );
 }

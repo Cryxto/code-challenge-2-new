@@ -42,7 +42,9 @@ function Navbar({ navState, handleNavToggle}: navStateInterface) {
                 </Link>
               </li>
               <li className="py-2">
-                <a href="#">About Us</a>
+                <Link href={'/about-us'}>
+                  About Us
+                </Link>
               </li>
               <li className="py-2">
                 <Link href={'/products'}>
