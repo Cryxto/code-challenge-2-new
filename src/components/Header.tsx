@@ -78,7 +78,7 @@ function Header() {
       style={{ maxWidth: modalActive ? modalWidth : "100%" }}
       className={`text-slate-100 max-h-full ${
         pathname !== "/" ? "fixed" : "fixed"
-      } z-30 w-full max-w-full top-0 left-0 dark:text-slate-100 rounded-b-[2rem] ${pathname === "/" ?scrollState ?  "on-scroll":'' : "bg-[#271008]"}`}>
+      } z-30 w-full max-w-full top-0 left-0 dark:text-slate-100 rounded-b-[2rem] ${pathname === "/" ?scrollState ?  "on-scroll":'' : "on-scroll"}`}>
       {/* <header className="text-black backdrop-blur-sm bg-white/30 absolute z-50 w-full top-0 left-0 dark:text-white dark:bg-gray-900/90 h-16"> */}
       <Navbar navState={navState} handleNavToggle={handleNavToggle} />
     </header>
