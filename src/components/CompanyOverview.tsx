@@ -5,7 +5,7 @@ import React from "react";
 export interface CompanyOverviewInterface {
   theImage?: string;
   reverse?: boolean;
-  shadow?:boolean
+  shadow?: boolean;
   children: React.ReactNode;
 }
 
@@ -25,18 +25,20 @@ function CompanyOverview(props: CompanyOverviewInterface) {
   return (
     <>
       <div className={`hero lg:min-h-full text-gray-900 py-12   leading-loose `}>
-        <div className={`hero-content flex-col md:flex-row${props.reverse?'-reverse':''} `}>
+        <div className={`hero-content flex-col md:flex-row${props.reverse ? "-reverse" : ""}`}>
           <figure className="p-3 max-w-96">
             <Image
               src={props.theImage || defaultValue.theImage}
-              className={`max-w-full w-full rounded-lg ${props.shadow?'shadow-2xl':''}`}
+              className={`max-w-full w-full rounded-lg ${props.shadow ? "shadow-2xl" : ""}`}
               // fill={true}
               width={1000}
               height={1000}
               alt="heh"
             />
           </figure>
-          <div className="text-justify max-w-sm lg:max-w-xl md:max-w-md p-3">{props.children || defaultValue.children}</div>
+          <div className="text-justify max-w-sm lg:max-w-xl md:max-w-md p-3">
+            {props.children || defaultValue.children}
+          </div>
         </div>
       </div>
     </>
