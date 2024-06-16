@@ -15,6 +15,9 @@ const config: Config = {
     },
     extend: {
       screens: {
+        'max-xsm': { 'raw': '(max-width: 368px)' },
+        // => @media (max-width: 350px) { ... }
+
         'max-sm': { 'raw': '(max-width: 768px)' },
         // => @media (max-width: 768px) { ... }
 

@@ -23,7 +23,7 @@ const defaultValue = {
 function CompanyOverview(props: CompanyOverviewInterface) {
   return (
     <>
-      <div className={`hero lg:min-h-screen text-gray-900 lg:py-14  leading-loose `}>
+      <section id="company-overview" className={`hero lg:min-h-screen text-gray-900 lg:py-14  leading-loose `}>
         <div className={`hero-content flex-col md:flex-row${props.reverse?'-reverse':''}`}>
           <figure className="p-3 max-w-96">
             <Image
@@ -37,7 +37,7 @@ function CompanyOverview(props: CompanyOverviewInterface) {
           </figure>
           <div className="text-justify max-w-sm lg:max-w-xl md:max-w-md p-3">{props.children || defaultValue.children}</div>
         </div>
-      </div>
+      </section>
     </>
   );
 }

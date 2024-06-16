@@ -88,8 +88,9 @@ function ModalProduct({ props, children }: { props:ModalProductInterface, childr
           {/* End Button */}
 
           {/* Content */}
-          <h2 className="font-bold text-2xl px-4">{props.title}</h2>
-          <p className="py-4 px-4 text-justify leading-loose">
+
+          <h2 className="font-bold text-2xl px-4 text-center">{props.title}</h2>
+          <p className="py-4 px-4 text-center leading-loose">
             {props.description}
           </p>
 

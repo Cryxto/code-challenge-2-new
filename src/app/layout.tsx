@@ -27,7 +27,7 @@ export default function RootLayout({
           <ModalContextProvider>
             <RandomUserProvider>
               <Header />
-              <main className=" flex flex-1 flex-col w-full">{children}</main>
+              <main className="flex flex-1 flex-col w-full min-h-screen">{children}</main>
             </RandomUserProvider>
           </ModalContextProvider>
           <Footer />

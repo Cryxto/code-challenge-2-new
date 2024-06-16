@@ -9,7 +9,7 @@ function Hero() {
     //   />
     // </div>
 
-    <div className="w-full h-screen relative self-center shadow-lg drop-shadow-2xl bg-black rounded-br-[20rem] mb-28">
+    <section id="hero" className="w-full h-screen relative self-center shadow-lg drop-shadow-2xl bg-black rounded-br-[20rem] mb-28">
       <Image
         className="top-0 left-0 w-full h-screen object-cover rounded-br-[20rem] shadow-2xl"
         src="https://images.unsplash.com/photo-1614451153744-0c4f015f4d68?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -27,7 +27,7 @@ function Hero() {
           {/* <button className='bg-white text-black '>Reserve Now</button> */}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 export { Hero };

@@ -83,7 +83,7 @@ function Testimony() {
   return (
     <>
       <h1 className="text-gray-900 font-bold self-center py-16 text-4xl">Testimonies</h1>
-      <div className="max-w-full w-full justify-center py-12 my-12 mb-36 self-center m-2 flex items-center bg-transparent rounded-box">
+      <section id="testimonies" className="max-w-full w-full justify-center py-12 my-12 mb-36 self-center m-2 flex items-center bg-transparent rounded-box">
         <button
           onClick={handleLeftArrow}
           className="btn hover:bg-slate-400/30 bg-transparent border-none mr-3 text-2xl text-slate-950 shadow-none">
@@ -121,7 +121,7 @@ function Testimony() {
           className="btn hover:bg-slate-400/30 bg-transparent border-none ml-3 text-2xl text-slate-950 shadow-none">
           {"❯" || ">"}
         </button>
-      </div>
+      </section>
     </>
   );
 }
