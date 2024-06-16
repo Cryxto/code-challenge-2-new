@@ -90,7 +90,7 @@ function ModalProduct({ props, children }: { props:ModalProductInterface, childr
           {/* Content */}
 
           <h2 className="font-bold text-2xl px-4 text-center">{props.title}</h2>
-          <p className="py-4 px-4 text-center leading-loose">
+          <p className="py-4 px-4 mx-12 text-center leading-loose ">
             {props.description}
           </p>
 

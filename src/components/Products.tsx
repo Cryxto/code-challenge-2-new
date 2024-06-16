@@ -12,8 +12,8 @@ function Products() {
             <ModalProduct
               props={{
                 title: "Product Based",
-                description: " We make and release a finished woodcraft product that ready to use.",
-                content: <ProductsData productType="product" />,
+                description: " At Nyoo Kayu Woodworking, our product range is a testament to our dedication to quality, sustainability, and craftsmanship. Each piece is thoughtfully designed and meticulously crafted to combine beauty with functionality. We offer a variety of products, from elegant furniture to educational toys, all made with eco-friendly materials and finishes.",
+                content: <ProductsData maxShow={5} productType="product" />,
               }}>
               <div className="card w-[20rem] sm:w-96 bg-base-100/95 shadow-xl h-64 relative overflow-hidden">
                 <figure className="w-full h-full">
@@ -35,8 +35,8 @@ function Products() {
             <ModalProduct
               props={{
                 title: "Service Based",
-                description: " We nande to use.",
-                content: <ProductsData productType="service" />,
+                description: "In addition to our wide range of products, Nyoo Kayu Woodworking provides specialized services to meet your custom woodworking needs. Whether you need custom furniture creation, repair, or modification, our skilled artisans are here to help bring your vision to life, ensuring each piece is crafted with precision and care.",
+                content: <ProductsData maxShow={-1} productType="service" />,
               }}>
               <div className="card w-[20rem] sm:w-96 bg-base-100/95 shadow-xl h-64 relative overflow-hidden">
                 <figure className="w-full h-full">

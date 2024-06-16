@@ -58,12 +58,12 @@ export default function Page() {
         <div className="tab-content-container p-10">
           {activeTab === 1 && (
             <div role="tabpanel">
-              <ProductsData productType="product" />
+              <ProductsData maxShow={-1} productType="product" />
             </div>
           )}
           {activeTab === 2 && (
             <div role="tabpanel">
-              <ProductsData productType="service" />
+              <ProductsData maxShow={-1} productType="service" />
             </div>
           )}
           {/* {activeTab === 3 && <div role="tabpanel">Tab content 3</div>} */}

@@ -7,10 +7,10 @@ import Link from "next/link";
 export interface navStateInterface {
   navState: boolean;
   // scrollState: boolean;
-  handleNavToggle: ()=>void;
+  handleNavToggle: () => void;
 }
 
-function Navbar({ navState, handleNavToggle}: navStateInterface) {
+function Navbar({ navState, handleNavToggle }: navStateInterface) {
   return (
     <>
       <nav className="flex flex-wrap justify-between max-w-6xl mx-auto items-center p-4 relative ">
@@ -18,7 +18,9 @@ function Navbar({ navState, handleNavToggle}: navStateInterface) {
           <div className="flex flex-row w-full justify-between items-center">
             {/* <h1>I am logo</h1> */}
             <div className={`md:max-w-20 max-w-14 flex`}>
-              <Image className="border-slate-100 " src={logo} alt="" />
+              <Link onClick={handleNavToggle} href={"/"}>
+                <Image className="border-slate-100 " src={logo} alt="" />
+              </Link>
             </div>
             <div className="md:hidden lg:hidden items-center flex">
               {navState ? (
@@ -32,28 +34,27 @@ function Navbar({ navState, handleNavToggle}: navStateInterface) {
               )}
             </div>
           </div>
-          <div className={`${navState? 'block':'hidden '} md:block lg:block w-full `}>
-            <ul
-              className={`flex items-center flex-col flex-1 justify-end  md:flex-row lg:flex-row gap-5 font-bold `}>
+          <div className={`${navState ? "block" : "hidden "} md:block lg:block w-full `}>
+            <ul className={`flex items-center flex-col flex-1 justify-end  md:flex-row lg:flex-row gap-5 font-bold `}>
               <li className="py-2">
                 {/* <a href="#">Home</a> */}
-                <Link onClick={handleNavToggle} href={'/'}>
+                <Link onClick={handleNavToggle} href={"/"}>
                   Home
                 </Link>
               </li>
               <li className="py-2">
-                <Link onClick={handleNavToggle} href={'/about-us'}>
+                <Link onClick={handleNavToggle} href={"/about-us"}>
                   About Us
                 </Link>
               </li>
               <li className="py-2">
-                <Link onClick={handleNavToggle} href={'/products'}>
+                <Link onClick={handleNavToggle} href={"/products"}>
                   Product
                 </Link>
                 {/* <a href="#">Product</a> */}
               </li>
               <li className="py-2">
-                <Link onClick={handleNavToggle} href={'/teams'}>
+                <Link onClick={handleNavToggle} href={"/teams"}>
                   Team
                 </Link>
                 {/* <a href="#">Teams</a> */}
