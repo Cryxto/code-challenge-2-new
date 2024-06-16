@@ -38,6 +38,10 @@ function Header() {
           setScrollState(true);
         } else {
           setScrollState(navState);
+          if (window.scrollY < 500) {
+            setScrollState(false);
+            console.log(scrollState);
+          }
         }
       }
     }
@@ -50,8 +54,8 @@ function Header() {
   }, [navState]);
   function handleNavToggle() {
     setNavState((prevNavState) => {
-      const newNavState = !prevNavState;
-      
+      let newNavState = !prevNavState;
+
       if (newNavState === true) {
         if (window.scrollY < 500) {
           setScrollState(true);
@@ -63,10 +67,15 @@ function Header() {
           setScrollState(false);
         }
       }
-      if (window.innerWidth>768 && window.scrollY < 500) {
+      if (window.innerWidth > 768 && window.scrollY < 500) {
         setScrollState(false);
-        return !newNavState;
+        newNavState = false;
       }
+      if (window.innerWidth > 768) {
+        newNavState = false;
+      }
+      console.log(newNavState);
+      // console.log(navState);
       return newNavState;
     });
   }
@@ -77,7 +86,9 @@ function Header() {
     <header
       id="header"
       style={{ maxWidth: modalActive ? modalWidth : "100%" }}
-      className={`text-slate-100 max-h-full fixed z-30 w-full max-w-full top-0 left-0 dark:text-slate-100 rounded-b-[2rem] ${scrollState ?  "on-scroll":'' }`}>
+      className={`text-slate-100 max-h-full fixed z-30 w-full max-w-full top-0 left-0 dark:text-slate-100 rounded-b-[2rem] ${
+        scrollState ? "on-scroll" : ""
+      }`}>
       {/* <header className="text-black backdrop-blur-sm bg-white/30 absolute z-50 w-full top-0 left-0 dark:text-white dark:bg-gray-900/90 h-16"> */}
       <Navbar navState={navState} handleNavToggle={handleNavToggle} />
     </header>

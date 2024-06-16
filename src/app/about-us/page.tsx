@@ -30,9 +30,7 @@ export default function Page() {
                 About Us
               </h1>
               <p className="max-w-[640px] drop-shadow-2xl py-2 text-[1rem] leading-loose text-justify">
-                At Nyoo Kayu Woodworking, we foster a culture of creativity, collaboration, and sustainability. Our team
-                is passionate about woodworking and is committed to continuous learning and improvement. We believe in
-                the power of community and support each other in achieving both personal and professional growth.
+              <b>Nyoo Kayu Woodworking</b> was established in 2010 by <b>Markus Udayana</b> and operates in Kabupaten Tangerang, Banten Province, Indonesia. What began a woodworking as  hobby has evolved into a passion-driven. The company blends craftsmanship with sustainability to create premium, eco-friendly furniture.
               </p>
               {/* <button className='bg-white text-black '>Reserve Now</button> */}
             </div>
