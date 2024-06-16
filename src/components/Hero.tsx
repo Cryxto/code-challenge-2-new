@@ -16,7 +16,7 @@ function Hero() {
         alt="/"
         fill={true}
       />
-      <div className="bg-black/40 absolute top-0 left-0 w-full h-screen rounded-br-[20rem]" />
+      <div className="bg-black/60 absolute top-0 left-0 w-full h-screen rounded-br-[20rem]" />
       <div className="absolute top-0 w-full h-full flex flex-col justify-center text-slate-100 items-center ">
         <div className="max-w-[1100px] absolute p-4 m-4 ">
           <p className="font-medium">Quality Oriented</p>

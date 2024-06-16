@@ -37,23 +37,23 @@ function Navbar({ navState, handleNavToggle}: navStateInterface) {
               className={`flex items-center flex-col flex-1 justify-end  md:flex-row lg:flex-row gap-5 font-bold `}>
               <li className="py-2">
                 {/* <a href="#">Home</a> */}
-                <Link href={'/'}>
+                <Link onClick={handleNavToggle} href={'/'}>
                   Home
                 </Link>
               </li>
               <li className="py-2">
-                <Link href={'/about-us'}>
+                <Link onClick={handleNavToggle} href={'/about-us'}>
                   About Us
                 </Link>
               </li>
               <li className="py-2">
-                <Link href={'/products'}>
+                <Link onClick={handleNavToggle} href={'/products'}>
                   Product
                 </Link>
                 {/* <a href="#">Product</a> */}
               </li>
               <li className="py-2">
-                <Link href={'/teams'}>
+                <Link onClick={handleNavToggle} href={'/teams'}>
                   Team
                 </Link>
                 {/* <a href="#">Teams</a> */}

@@ -4,6 +4,7 @@ import { Products } from "@/components/Products";
 import { ModalProduct } from "@/components/ModalProduct";
 import React from "react";
 import { Testimony } from "@/components/Testimony";
+import { Tagline } from "@/components/Tagline";
 
 export default function Home() {
   const companyOverviewData: CompanyOverviewInterface[] = [
@@ -56,7 +57,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <section id="company-overview">
+      <section id="company-overview" className="pb-24">
       {companyOverviewData.map((data, i) => {
         data.reverse = reverse;
         data.shadow = true;
@@ -66,6 +67,9 @@ export default function Home() {
       </section>
       <Products />
       <Testimony/>
+      <Tagline/>
+
+
       {/* <Modal /> */}
 
       {/* <div className="bg-green-600 w-screen relative self-center flex justify-center">

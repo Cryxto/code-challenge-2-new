@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <footer className="footer footer-center p-10 bg-[#271008] rounded-t font-semibold">
+    <footer className="footer footer-center p-10 bg-[#271008] rounded-t font-semibold mt-56">
       <nav className="grid grid-flow-col gap-4">
         <a className="link link-hover">About us</a>
         <a className="link link-hover">Contact</a>
