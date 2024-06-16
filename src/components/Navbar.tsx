@@ -2,6 +2,7 @@ import Image from "next/image";
 import { RxCross2, RxHamburgerMenu } from "react-icons/rx";
 // import { GiHamburgerMenu } from "react-icons/gi";
 import logo from "../../public/assets/logo-bordered.png";
+import Link from "next/link";
 
 export interface navStateInterface {
   navState: boolean;
@@ -35,16 +36,25 @@ function Navbar({ navState, handleNavToggle}: navStateInterface) {
             <ul
               className={`flex items-center flex-col flex-1 justify-end  md:flex-row lg:flex-row gap-5 font-bold `}>
               <li className="py-2">
-                <a href="#">Home</a>
+                {/* <a href="#">Home</a> */}
+                <Link href={'/'}>
+                  Home
+                </Link>
               </li>
               <li className="py-2">
                 <a href="#">About Us</a>
               </li>
               <li className="py-2">
-                <a href="#">Product</a>
+                <Link href={'/products'}>
+                  Product
+                </Link>
+                {/* <a href="#">Product</a> */}
               </li>
               <li className="py-2">
-                <a href="#">Teams</a>
+                <Link href={'/teams'}>
+                  Team
+                </Link>
+                {/* <a href="#">Teams</a> */}
               </li>
             </ul>
           </div>
