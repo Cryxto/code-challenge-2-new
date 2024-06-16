@@ -40,7 +40,7 @@ function Header() {
           setScrollState(navState);
           if (window.scrollY < 500) {
             setScrollState(false);
-            console.log(scrollState);
+            // console.log(scrollState);
           }
         }
       }
@@ -74,7 +74,7 @@ function Header() {
       if (window.innerWidth > 768) {
         newNavState = false;
       }
-      console.log(newNavState);
+      // console.log(newNavState);
       // console.log(navState);
       return newNavState;
     });

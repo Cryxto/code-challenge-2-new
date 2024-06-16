@@ -1,11 +1,13 @@
+import Link from "next/link";
+
 function Footer() {
   return (
     <footer className="footer footer-center p-10 bg-[#271008] rounded-t font-semibold mt-56">
       <nav className="grid grid-flow-col gap-4">
-        <a className="link link-hover">About us</a>
-        <a className="link link-hover">Contact</a>
-        <a className="link link-hover">Jobs</a>
-        <a className="link link-hover">Press kit</a>
+        <Link href={'/'} className="link link-hover">Home</Link>
+        <Link href={'/about-us'} className="link link-hover">About us</Link>
+        <Link href={'/products'} className="link link-hover">Product</Link>
+        <Link href={'/teams'} className="link link-hover">Team</Link>
       </nav>
       <nav>
         <div className="grid grid-flow-col gap-4">
@@ -27,7 +29,7 @@ function Footer() {
         </div>
       </nav>
       <aside>
-        <p>Copyright © 2024 - All right reserved by ACME Industries Ltd</p>
+        <p>Copyright © 2024 - All right reserved by Nyoo Kayu Woodworking</p>
       </aside>
     </footer>
   );
