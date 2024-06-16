@@ -7,7 +7,7 @@ import { ModalContextProvider } from "@/context/providers/ModalContext";
 import { RandomUserProvider } from "@/context/providers/RandomUserContext";
 
 const poppins = Poppins({ subsets: ["latin"], weight: "400" });
-export const didactGothic = Didact_Gothic({ weight: "400", subsets: ["latin"] });
+// export const didactGothic = Didact_Gothic({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
