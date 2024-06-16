@@ -25,7 +25,7 @@ function CompanyOverview(props: CompanyOverviewInterface) {
   return (
     <>
       <div className={`hero lg:min-h-full text-gray-900 py-12   leading-loose `}>
-        <div className={`hero-content flex-col md:flex-row${props.reverse?'-reverse':''}`}>
+        <div className={`hero-content flex-col md:flex-row${props.reverse?'-reverse':''} `}>
           <figure className="p-3 max-w-96">
             <Image
               src={props.theImage || defaultValue.theImage}
